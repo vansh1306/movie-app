@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font: 'Outfit', sans-serif;
+
+  /* Colors */
+  --bg-primary: #080808;
+  --bg-secondary: #161616;
+  --bg-card: #1a1a1a;
+  --bg-container: #111111;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Accent */
+  --accent: #f97316;
+  --accent-hover: #fb923c;
+  --accent-dim: rgba(249, 115, 22, 0.15);
+
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --text-muted: #52525b;
+
+  /* Functional */
+  --danger: #ef4444;
+  --success: #22c55e;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 0 20px rgba(249, 115, 22, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background-color: #0e0e10;
+  background-image:
+    radial-gradient(ellipse 100% 60% at 0% 0%, rgba(220, 220, 235, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 55% at 100% 0%, rgba(200, 200, 220, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 70% at 50% 50%, rgba(180, 180, 200, 0.05) 0%, transparent 65%),
+    radial-gradient(ellipse 90% 40% at 50% 100%, rgba(210, 210, 225, 0.06) 0%, transparent 55%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  min-height: 100vh;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}

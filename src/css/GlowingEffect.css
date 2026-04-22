@@ -1,0 +1,58 @@
+.glow-static-border {
+    pointer-events: none;
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    border: 1px solid transparent;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.glow-static-border.glow-active {
+    opacity: 1;
+}
+
+.glow-static-border.glow-disabled {
+    display: block;
+}
+
+.glow-container {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+.glow-container.glow-blur {
+    filter: blur(var(--blur));
+}
+
+.glow-container.glow-hidden {
+    display: none;
+}
+
+.glow-inner {
+    border-radius: inherit;
+}
+
+.glow-inner::after {
+    content: "";
+    border-radius: inherit;
+    position: absolute;
+    inset: calc(-1 * var(--glowingeffect-border-width));
+    border: var(--glowingeffect-border-width) solid transparent;
+    background: var(--gradient);
+
+    opacity: var(--active);
+    transition: opacity 0.3s;
+    mask-clip: padding-box, border-box;
+    mask-composite: intersect;
+    mask-image:
+        linear-gradient(transparent, transparent),
+        conic-gradient(from calc((var(--start) - var(--spread)) * 1deg),
+            transparent 0deg,
+            white,
+            transparent calc(var(--spread) * 2deg));
+}
