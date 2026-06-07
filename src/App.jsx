@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import { MovieProvider } from './contexts/MovieContext';
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </main>
+      <Analytics />
     </MovieProvider>
   )
 }
