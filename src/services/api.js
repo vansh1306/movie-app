@@ -1,5 +1,5 @@
 const ACCESS_TOKEN = import.meta.env.VITE_TMDB_ACCESS_TOKEN;
-const BASE_URL = "https://api.themoviedb.org/3";
+const BASE_URL = "https://api.tmdb.org/3";
 
 const fetchFromTMDB = async (endpoint) => {
   if (!ACCESS_TOKEN || ACCESS_TOKEN === "your_read_access_token_here") {
